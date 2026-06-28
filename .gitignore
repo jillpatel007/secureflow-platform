@@ -7,3 +7,11 @@ __pycache__/
 # OS / editor noise
 .DS_Store
 *.swp
+
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+devsecops-config
