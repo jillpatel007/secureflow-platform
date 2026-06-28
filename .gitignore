@@ -15,3 +15,6 @@ __pycache__/
 crash.log
 *.tfvars
 devsecops-config
+
+# Cosign signing keys — NEVER commit private keys
+infra/cosign.key

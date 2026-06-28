@@ -16,4 +16,4 @@ def health():
 
 if __name__ == "__main__":
     # 0.0.0.0 makes the server reachable from outside the container later
-    app.run(host="0.0.0.0", port=8000)
+    app.run(host="0.0.0.0", port=8000)  # nosemgrep: 0.0.0.0 needed inside container; exposure controlled at k8s layer
