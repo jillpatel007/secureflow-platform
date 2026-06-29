@@ -14,16 +14,20 @@ jobs:
         with:
           fetch-depth: 0
       - name: Gitleaks secret scan
-        uses: gitleaks/gitleaks-action@v2
+        run: |
+          curl -sSfL https://github.com/gitleaks/gitleaks/releases/download/v8.21.2/gitleaks_8.21.2_linux_x64.tar.gz -o gitleaks.tar.gz
+          tar -xzf gitleaks.tar.gz gitleaks
+          ./gitleaks detect --source . --no-git --redact --verbose --exit-code 1 \
+            --report-format sarif --report-path results.sarif
 
   sast:
     runs-on: ubuntu-latest
+    container:
+      image: semgrep/semgrep
     steps:
       - uses: actions/checkout@v4
       - name: Semgrep SAST scan
-        uses: returntocorp/semgrep-action@v1
-        with:
-          config: auto
+        run: semgrep scan --config=auto --error app/
 
   sca-and-iac:
     runs-on: ubuntu-latest
