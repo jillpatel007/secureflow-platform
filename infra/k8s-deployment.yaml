@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: secureflow-api
+  labels:
+    app: secureflow-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: secureflow-api
+  template:
+    metadata:
+      labels:
+        app: secureflow-api
+    spec:
+      containers:
+        - name: secureflow-api
+          image: secureflow-api:0.1.0
+          ports:
+            - containerPort: 8000
