@@ -10,6 +10,12 @@ spec:
         any:
           - resources:
               kinds: [Pod]
+      exclude:
+        any:
+          - resources:
+              namespaces:
+                - security-tools
+                - kube-system
       validate:
         message: "Containers must not run as root. Set runAsNonRoot: true."
         pattern:
