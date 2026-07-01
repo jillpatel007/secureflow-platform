@@ -10,10 +10,12 @@ security, and supply-chain security skills.
 
 ## What this demonstrates
 
-Security is integrated across the whole software lifecycle — not bolted on at the end.
-The project covers the core domains of the GIAC GCSA and Practical DevSecOps (CDP)
-certifications: secure CI/CD pipelines, SAST, SCA, DAST, IaC scanning, container and
-supply-chain security, Kubernetes hardening, secrets management, and vulnerability triage.
+Security is integrated across the entire software delivery lifecycle — embedded at
+every stage rather than bolted on at the end. The project implements the core
+practices of modern DevSecOps: secure CI/CD pipelines, static and dynamic application
+security testing (SAST/DAST), software composition analysis (SCA), infrastructure-as-code
+scanning, container and supply-chain security, Kubernetes hardening, secrets management,
+runtime threat detection, and automated vulnerability triage.
 
 ## Architecture
 
