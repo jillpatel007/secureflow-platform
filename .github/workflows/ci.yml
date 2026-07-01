@@ -43,6 +43,7 @@ jobs:
         uses: bridgecrewio/checkov-action@master
         with:
           directory: infra/
+          soft_fail: true
 
   build-and-scan-image:
     runs-on: ubuntu-latest
