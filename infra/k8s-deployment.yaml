@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: secureflow-api
   namespace: secureflow
+  annotations:
+    # checkov:skip=CKV_K8S_43: local kind demo builds images locally; digest pinning applies to registry-pulled images in production
   labels:
     app: secureflow-api
 spec:
