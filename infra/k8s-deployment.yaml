@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: secureflow-api
+  namespace: secureflow
   labels:
     app: secureflow-api
 spec:
@@ -14,8 +15,16 @@ spec:
       labels:
         app: secureflow-api
     spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
       containers:
         - name: secureflow-api
           image: secureflow-api:0.1.0
           ports:
             - containerPort: 8000
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: false
+            capabilities:
+              drop: ["ALL"]
