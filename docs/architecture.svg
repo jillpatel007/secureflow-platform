@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <style>
+      .title { font-size: 26px; font-weight: 700; fill: #1a1a2e; }
+      .subtitle { font-size: 13px; fill: #5a5a72; }
+      .tool { font-size: 12.5px; font-weight: 600; fill: #1a1a2e; }
+      .desc { font-size: 10.5px; fill: #5a5a72; }
+      .lbl { font-size: 11px; font-weight: 700; fill: #6b7280; letter-spacing: 1px; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+  <rect width="960" height="720" fill="#f7f8fc"/>
+  <text x="40" y="48" class="title">SecureFlow — DevSecOps Security Platform</text>
+  <text x="40" y="70" class="subtitle">Security embedded across the lifecycle: build -> scan -> deploy -> secure -> observe -> triage</text>
+
+  <text x="40" y="108" class="lbl">1 · CODE &amp; CI/CD PIPELINE  (GitHub Actions — every push)</text>
+  <rect x="40" y="120" width="880" height="150" rx="8" fill="#eef2ff" stroke="#c7d2fe"/>
+  <rect x="58" y="140" width="150" height="112" rx="8" fill="#fff" stroke="#c7d2fe"/>
+  <text x="133" y="168" text-anchor="middle" class="tool">Flask API</text>
+  <text x="133" y="188" text-anchor="middle" class="desc">Hardened Docker</text>
+  <text x="133" y="204" text-anchor="middle" class="desc">(non-root)</text>
+  <text x="133" y="228" text-anchor="middle" class="desc">Terraform IaC</text>
+  <line x1="212" y1="196" x2="246" y2="196" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="250" y="140" width="128" height="52" rx="8" fill="#fff" stroke="#c7d2fe"/>
+  <text x="314" y="162" text-anchor="middle" class="tool">Gitleaks</text>
+  <text x="314" y="180" text-anchor="middle" class="desc">secret scan</text>
+  <rect x="386" y="140" width="128" height="52" rx="8" fill="#fff" stroke="#c7d2fe"/>
+  <text x="450" y="162" text-anchor="middle" class="tool">Semgrep</text>
+  <text x="450" y="180" text-anchor="middle" class="desc">SAST</text>
+  <rect x="522" y="140" width="128" height="52" rx="8" fill="#fff" stroke="#c7d2fe"/>
+  <text x="586" y="162" text-anchor="middle" class="tool">Trivy</text>
+  <text x="586" y="180" text-anchor="middle" class="desc">SCA / CVEs</text>
+  <rect x="658" y="140" width="128" height="52" rx="8" fill="#fff" stroke="#c7d2fe"/>
+  <text x="722" y="162" text-anchor="middle" class="tool">Checkov</text>
+  <text x="722" y="180" text-anchor="middle" class="desc">IaC scan</text>
+  <rect x="250" y="200" width="196" height="52" rx="8" fill="#fff" stroke="#c7d2fe"/>
+  <text x="348" y="222" text-anchor="middle" class="tool">Syft</text>
+  <text x="348" y="240" text-anchor="middle" class="desc">SBOM</text>
+  <rect x="454" y="200" width="196" height="52" rx="8" fill="#fff" stroke="#c7d2fe"/>
+  <text x="552" y="222" text-anchor="middle" class="tool">Cosign</text>
+  <text x="552" y="240" text-anchor="middle" class="desc">image signing + verify</text>
+  <rect x="658" y="200" width="128" height="52" rx="8" fill="#e0e7ff" stroke="#a5b4fc"/>
+  <text x="722" y="222" text-anchor="middle" class="tool">Build image</text>
+  <text x="722" y="240" text-anchor="middle" class="desc">needs: scans</text>
+  <line x1="480" y1="270" x2="480" y2="298" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="40" y="322" class="lbl">2 · KUBERNETES CLUSTER  (deploy · secure · observe)</text>
+  <rect x="40" y="334" width="880" height="256" rx="8" fill="#ecfdf5" stroke="#a7f3d0"/>
+  <rect x="58" y="354" width="180" height="72" rx="8" fill="#fff" stroke="#a7f3d0"/>
+  <text x="148" y="382" text-anchor="middle" class="tool">secureflow-api</text>
+  <text x="148" y="402" text-anchor="middle" class="desc">2 replicas · Service</text>
+  <text x="58" y="452" class="lbl" fill="#059669">SECURE</text>
+  <rect x="58" y="460" width="140" height="46" rx="8" fill="#fff" stroke="#a7f3d0"/>
+  <text x="128" y="480" text-anchor="middle" class="tool">Kyverno</text>
+  <text x="128" y="496" text-anchor="middle" class="desc">admission control</text>
+  <rect x="206" y="460" width="140" height="46" rx="8" fill="#fff" stroke="#a7f3d0"/>
+  <text x="276" y="480" text-anchor="middle" class="tool">RBAC</text>
+  <text x="276" y="496" text-anchor="middle" class="desc">least privilege</text>
+  <rect x="354" y="460" width="150" height="46" rx="8" fill="#fff" stroke="#a7f3d0"/>
+  <text x="429" y="480" text-anchor="middle" class="tool">NetworkPolicy</text>
+  <text x="429" y="496" text-anchor="middle" class="desc">default-deny</text>
+  <rect x="512" y="460" width="140" height="46" rx="8" fill="#fff" stroke="#a7f3d0"/>
+  <text x="582" y="480" text-anchor="middle" class="tool">Vault</text>
+  <text x="582" y="496" text-anchor="middle" class="desc">secrets mgmt</text>
+  <rect x="660" y="460" width="140" height="46" rx="8" fill="#fff" stroke="#a7f3d0"/>
+  <text x="730" y="480" text-anchor="middle" class="tool">kube-bench</text>
+  <text x="730" y="496" text-anchor="middle" class="desc">CIS compliance</text>
+  <text x="58" y="536" class="lbl" fill="#059669">OBSERVE / DETECT</text>
+  <rect x="58" y="544" width="220" height="40" rx="8" fill="#fff" stroke="#a7f3d0"/>
+  <text x="168" y="563" text-anchor="middle" class="tool">Falco</text>
+  <text x="168" y="577" text-anchor="middle" class="desc">runtime detection (eBPF)</text>
+  <rect x="286" y="544" width="220" height="40" rx="8" fill="#fff" stroke="#a7f3d0"/>
+  <text x="396" y="563" text-anchor="middle" class="tool">OWASP ZAP</text>
+  <text x="396" y="577" text-anchor="middle" class="desc">DAST — attacks running app</text>
+  <line x1="480" y1="590" x2="480" y2="618" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="40" y="642" class="lbl">3 · VULNERABILITY TRIAGE</text>
+  <rect x="40" y="654" width="880" height="52" rx="8" fill="#fef3c7" stroke="#fde68a"/>
+  <text x="60" y="678" class="tool">Triage engine</text>
+  <text x="60" y="695" class="desc">Prioritizes findings by severity x actionability (fixability)</text>
+  <line x1="360" y1="680" x2="392" y2="680" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="404" y="678" class="tool">+ Local LLM (Ollama)</text>
+  <text x="404" y="695" class="desc">natural-language risk analysis &amp; remediation</text>
+</svg>
